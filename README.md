@@ -1,28 +1,60 @@
-# gate-code
-def AND(a,b):   
-    return a&b&1
+def AND (a, b):
+ 
+    if a == 1 and b == 1:
+        return True
+    else:
+        return False
     
-def OR(a,b): 
-    return a|b
+# Driver code
+if __name__=='__main__':
+    print(AND(1, 1))
 
-def NOT (a):
-    return int(not a)
+def NAND (a, b):
+    if a == 1 and b == 1:
+        return False
+    else:
+        return True
  
-def NOR(a,b):  
-    ans = OR(a,b)
-    return NOT(ans)
+# Driver code
+if __name__=='__main__':
+    print(NAND(1, 0))
 
+def OR(a, b):
+    if a == 1 or b ==1:
+        return True
+    else:
+        return False
  
+# Driver code
+if __name__=='__main__':
+    print(OR(0, 0))
 
-j = int(input())
-k = int(input())
-Qp = int(input())
+def XOR (a, b):
+    if a != b:
+        return 1
+    else:
+        return 0
+ 
+# Driver code
+if __name__=='__main__':
+    print(XOR(5, 5))
 
+def NOT(a):
+    return not a
+# Driver code
+if __name__=='__main__':
+    print(NOT(0))
 
-r = AND(k,Qp)
-s = AND(j,NOT(Qp))
-
-a1 = NOR(s,Qp)
-Qn = NOR(r,a1)
-
-print(Qn)
+def NOR(a, b):
+    if(a == 0) and (b == 0):
+        return 1
+    elif(a == 0) and (b == 1):
+        return 0
+    elif(a == 1) and (b == 0):
+        return 0
+    elif(a == 1) and (b == 1):
+        return 0
+ 
+# Driver code
+if __name__=='__main__':
+    print(NOR(0, 0))
